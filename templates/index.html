@@ -15,14 +15,22 @@
     <div class="row">
       <div class="col-md-12 jumbotron text-center">
         <h1>Belly Button Biodiversity Dashboard</h1>
+                
         <p>Use the interactive charts below to explore the dataset</p>
+        <!--put in belly button image-->
+        <!--<img class="bugImg" src="/Images/bacteria_by_filterforgedotcom.jpg">-->
+
       </div>
     </div>
     <div class="row">
       <div class="col-md-2">
         <div class="well">
+
+          <!-- Let user select a sample from dropdown list-->
           <h5>SELECT Sample:</h5>
-          <select id="selDataset" onchange="optionChanged(this.value)"></select>
+          <select id="selDataset" onchange="optionChanged(this.value)"></select> 
+          <!--this calls app.py with user input value-->
+
         </div>
         <div class="panel panel-primary">
           <div class="panel-heading">
@@ -32,7 +40,7 @@
         </div>
       </div>
       <div class="col-md-5">
-        <div id="pie"></div>
+        <div id="pie"></div> <!--pie graph-->
       </div>
       <div class="col-md-5">
         <div id="gauge"></div>
@@ -41,15 +49,16 @@
   </div>
   <div class="row">
     <div class="col-md-12">
-      <div id="bubble"></div>
+      <div id="bubble"></div>  <!--bubble graph-->
     </div>
   </div>
 
-  <!-- <script src="https://cdn.plot.ly/plotly-1.31.2.min.js"></script> -->
+  <script src="https://cdn.plot.ly/plotly-1.31.2.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
   <script src="{{ url_for('static', filename='js/bonus.js') }}"></script>
-  <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+  <!-- this calls the javascript app-->
+  <script src="{{ url_for('static', filename='js/app.js') }}"></script> 
 
 </body>
 
