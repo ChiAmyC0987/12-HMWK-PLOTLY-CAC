@@ -83,6 +83,7 @@ function init() {
   d3.json("/names").then((sampleNames) => {
     sampleNames.forEach((sample) => {
       selector
+        .enter()
         .append("option")
         .text(sample)
         .property("value", sample);
